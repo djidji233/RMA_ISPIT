@@ -8,7 +8,7 @@ import com.example.rma_ispit.data.models.WeatherEntity
 
 @Database(
     entities = [WeatherEntity::class],
-    version = 1,
+    version = 2,
     exportSchema = false)
 @TypeConverters()
 abstract class WeatherDB : RoomDatabase() {

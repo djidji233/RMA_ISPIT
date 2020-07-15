@@ -14,5 +14,7 @@ data class Weather ( // UI
     val mintemp : Float,
     val avgtemp : Float,
     val wind : Float,
-    val uv : Float
+    val uv : Float,
+
+    val currenttemp : Float
 )

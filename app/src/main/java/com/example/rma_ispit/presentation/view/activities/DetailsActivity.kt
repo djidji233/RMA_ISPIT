@@ -28,8 +28,8 @@ class DetailsActivity : AppCompatActivity(), OnMapReadyCallback {
         mapFragment.getMapAsync(this)
 
         mesto_datumTv.text = intent.getStringExtra("name") + ", " + intent.getStringExtra("date")
-        max_dnevnaTv.text = "Maksimalna dnevna temperatura: " + String.format("%.1f C", intent.getFloatExtra("maxtemp",0.0f))
-        min_dnevnaTv.text = "Minimalna dnevna temperatura: " + String.format("%.1f C", intent.getFloatExtra("mintemp",0.0f))
+        max_dnevnaTv.text = "Maksimalna dnevna temperatura: " + String.format("%.1f°", intent.getFloatExtra("maxtemp",0.0f))
+        min_dnevnaTv.text = "Minimalna dnevna temperatura: " + String.format("%.1f°", intent.getFloatExtra("mintemp",0.0f))
         brzina_vetraTv.text = "Brzina vetra: " + String.format("%.1f mph", intent.getFloatExtra("wind",0.0f))
         koef_uvTv.text = "Koeficijent UV zracenja: " + String.format("%.1f", intent.getFloatExtra("uv",0.0f))
 

@@ -26,8 +26,14 @@ class WeatherViewHolder (
             .placeholder(R.mipmap.ic_launcher_round)
             .into(icon)
 
-        val float = weather.avgtemp
-        temperatureTv.text = String.format("%.1f C", float)
+        var float = 0.0f
+        if(adapterPosition==0){
+            float = weather.currenttemp
+        } else {
+            float = weather.avgtemp
+        }
+
+        temperatureTv.text = String.format("%.1f°", float)
 
         nameTv.text = weather.name
         dateTv.text = weather.date

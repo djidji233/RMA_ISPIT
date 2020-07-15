@@ -32,7 +32,8 @@ class WeatherRepositoryImpl (
                         d.day.mintemp_c,
                         d.day.avgtemp_c,
                         d.day.maxwind_mph,
-                        d.day.uv
+                        d.day.uv,
+                        it.current.temp_c
                     ))
                 }
                 localDataSource.deleteAndInsertAll(entities)
@@ -78,7 +79,8 @@ class WeatherRepositoryImpl (
                         it.mintemp,
                         it.avgtemp,
                         it.wind,
-                        it.uv
+                        it.uv,
+                        it.currenttemp
                     )
                 }
             }

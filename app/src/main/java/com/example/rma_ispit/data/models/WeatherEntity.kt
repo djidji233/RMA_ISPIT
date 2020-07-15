@@ -22,5 +22,7 @@ data class WeatherEntity ( // DB
     val mintemp : Float,
     val avgtemp : Float,
     val wind : Float,
-    val uv : Float
+    val uv : Float,
+
+    val currenttemp : Float
 )

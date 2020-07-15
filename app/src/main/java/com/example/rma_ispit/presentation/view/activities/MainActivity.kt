@@ -80,8 +80,6 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
             Timber.e(it.toString())
             renderState(it)
         })
-        //mainViewModel.getAll()
-        //mainViewModel.fetchAll(cityEt.text.toString(), daysEt.text.toString().toInt())
     }
 
     private fun renderState(state : WeatherState){
@@ -110,6 +108,8 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         searchBtn.isVisible = !loading
         recyclerList.isVisible = !loading
     }
+
+
 
 
 }

@@ -27,30 +27,39 @@
         android:padding="10dp">
 
         <TextView
+            style="@style/DetailsCityFontStyle"
             android:id="@+id/mesto_datumTv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp">
         </TextView>
         <TextView
+            style="@style/DetailsOtherFontStyle"
+            android:textColor="@color/maxTemp"
             android:id="@+id/max_dnevnaTv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp">
         </TextView>
         <TextView
+            style="@style/DetailsOtherFontStyle"
+            android:textColor="@color/minTemp"
             android:id="@+id/min_dnevnaTv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp">
         </TextView>
         <TextView
+            style="@style/DetailsOtherFontStyle"
+            android:textColor="@color/wind"
             android:id="@+id/brzina_vetraTv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp">
         </TextView>
         <TextView
+            style="@style/DetailsOtherFontStyle"
+            android:textColor="@color/uv"
             android:id="@+id/koef_uvTv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
