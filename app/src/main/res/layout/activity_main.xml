@@ -20,14 +20,14 @@
 
         <EditText
             android:id="@+id/cityEt"
-            android:hint="City"
+            android:hint="@string/city"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
         </EditText>
         <EditText
             android:id="@+id/daysEt"
-            android:hint="Days"
+            android:hint="@string/days"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -36,7 +36,7 @@
             android:id="@+id/searchBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Prikazi">
+            android:text="@string/prikazi">
 
         </Button>
 
