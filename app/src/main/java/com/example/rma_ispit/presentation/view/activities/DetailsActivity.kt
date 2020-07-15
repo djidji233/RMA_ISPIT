@@ -46,7 +46,7 @@ class DetailsActivity : AppCompatActivity(), OnMapReadyCallback {
      */
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
-        
+
         val lat = intent.getFloatExtra("lat", 0.0f).toDouble()
         val lon = intent.getFloatExtra("lon", 0.0f).toDouble()
         val city = LatLng(lat, lon)

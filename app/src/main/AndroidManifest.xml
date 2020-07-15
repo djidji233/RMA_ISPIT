@@ -22,7 +22,9 @@
 
         </activity>
 
-        <activity android:name=".presentation.view.activities.MainActivity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".presentation.view.activities.MainActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="portrait"/>
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -30,7 +32,8 @@
         <activity
             android:name=".presentation.view.activities.DetailsActivity"
             android:label=""
-            android:parentActivityName=".presentation.view.activities.MainActivity">
+            android:parentActivityName=".presentation.view.activities.MainActivity"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.rma_ispit.presentation.view.activities.MainActivity"/>

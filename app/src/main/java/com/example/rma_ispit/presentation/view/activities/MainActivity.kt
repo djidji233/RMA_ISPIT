@@ -42,7 +42,6 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         weatherAdapter = WeatherAdapter(
             WeatherDiffItemCallback(),
             {
-                //Toast.makeText(this, "Clicked on ${it.name}", Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, DetailsActivity::class.java)
                 intent.putExtra("lat", it.lat)
                 intent.putExtra("lon", it.lon)
@@ -59,14 +58,20 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
     private fun initListeners(){
         searchBtn.setOnClickListener{
-//            val intent = Intent(this, DetailsActivity::class.java)
-//            startActivity(intent)
-            mainViewModel.getAll()
-            mainViewModel.fetchAll(cityEt.text.toString(), daysEt.text.toString().toInt())
-            //mainViewModel.getAll()
+            if (cityEt.text.isNotBlank() && daysEt.text.isNotBlank()
+                && daysEt.text.toString().toInt()>0 && daysEt.text.toString().toInt()<11) {
 
-            val inputManager: InputMethodManager =getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-            inputManager.hideSoftInputFromWindow(currentFocus?.windowToken, InputMethodManager.SHOW_FORCED)
+                mainViewModel.getAll()
+                mainViewModel.fetchAll(cityEt.text.toString(), daysEt.text.toString().toInt())
+
+                // hide keyboard
+                val inputManager: InputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+                inputManager.hideSoftInputFromWindow(currentFocus?.windowToken,InputMethodManager.SHOW_FORCED)
+            } else if (cityEt.text.isBlank()){
+                Toast.makeText(this,"Please provide a city", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(this,"Please select anywhere between 1 and 10 days", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 
