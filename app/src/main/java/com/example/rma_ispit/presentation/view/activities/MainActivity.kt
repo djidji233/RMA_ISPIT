@@ -44,6 +44,14 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
             {
                 //Toast.makeText(this, "Clicked on ${it.name}", Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, DetailsActivity::class.java)
+                intent.putExtra("lat", it.lat)
+                intent.putExtra("lon", it.lon)
+                intent.putExtra("name", it.name)
+                intent.putExtra("date", it.date)
+                intent.putExtra("maxtemp", it.maxtemp)
+                intent.putExtra("mintemp", it.mintemp)
+                intent.putExtra("wind", it.wind)
+                intent.putExtra("uv", it.uv)
                 startActivity(intent)
             })
         recyclerList.adapter = weatherAdapter

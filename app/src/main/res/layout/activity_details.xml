@@ -30,35 +30,30 @@
             android:id="@+id/mesto_datumTv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Belgrade,2020-07-09"
             android:padding="10dp">
         </TextView>
         <TextView
             android:id="@+id/max_dnevnaTv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Maksimalna dnevna temp: 27.9C"
             android:padding="10dp">
         </TextView>
         <TextView
             android:id="@+id/min_dnevnaTv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Minimalna dnevna temp: 17.8C"
             android:padding="10dp">
         </TextView>
         <TextView
             android:id="@+id/brzina_vetraTv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Brzina vetra: 6.5mph"
             android:padding="10dp">
         </TextView>
         <TextView
             android:id="@+id/koef_uvTv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Koeficijent UV zracenja: 8.5"
             android:padding="10dp">
         </TextView>
 
